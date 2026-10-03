@@ -20,8 +20,8 @@ export async function comTokenAdmin(){
                 .post('/api/auth/login')
                 .set('Content-Type', 'application/json')
                 .send({
-                        email: process.env.ADMIN_EMAIL, 
-                        senha: process.env.ADMIN_SENHA})
+                        email: process.env.LOGIN_EMAIL, 
+                        senha: process.env.LOGIN_SENHA})
 
         tokenEmCache = body.body.token;
         }       
