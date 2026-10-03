@@ -10,8 +10,8 @@ jobs:
 
     env:
       BASE_URL: ${{ secrets.BASE_URL }}
-      EMAIL: ${{ secrets.EMAIL }}
-      PASSWORD: ${{ secrets.PASSWORD }}
+      LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
+      LOGIN_SENHA: ${{ secrets.LOGIN_SENHA }}
       TESTE: ${{ secrets.TESTE }}
     
 
@@ -27,8 +27,8 @@ jobs:
 
       - name: Verificando secrets
         run: |
-          echo "ADMIN_EMAIL length: ${#ADMIN_EMAIL}"
-          echo "ADMIN_SENHA length: ${#ADMIN_SENHA}"
+          echo "LOGIN_EMAIL length: ${#LOGIN_EMAIL}"
+          echo "LOGIN_SENHA length: ${#LOGIN_SENHA}"
           echo "BASE_URL length: ${#BASE_URL}"
           echo "TESTE length: ${#TESTE}"
       - name: Subindo a API
