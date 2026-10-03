@@ -12,6 +12,7 @@ jobs:
       BASE_URL: ${{ secrets.BASE_URL }}
       EMAIL: ${{ secrets.EMAIL }}
       PASSWORD: ${{ secrets.PASSWORD }}
+      TESTE: ${{ secrets.TESTE }}
     
 
     steps:
