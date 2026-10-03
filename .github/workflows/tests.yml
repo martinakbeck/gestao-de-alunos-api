@@ -12,6 +12,11 @@ jobs:
       BASE_URL: ${{ secrets.BASE_URL }}
       EMAIL: ${{ secrets.EMAIL }}
       PASSWORD: ${{ secrets.PASSWORD }}
+    - name: Verificando secrets
+    run: |
+      if [ -n "$ADMIN_EMAIL" ]; then echo "ADMIN_EMAIL definido"; else echo "ADMIN_EMAIL vazio"; fi
+      if [ -n "$ADMIN_SENHA" ]; then echo "ADMIN_SENHA definido"; else echo "ADMIN_SENHA vazio"; fi
+      if [ -n "$BASE_URL" ]; then echo "BASE_URL definido"; else echo "BASE_URL vazio"; fi  
 
     steps:
       - uses: actions/checkout@v4
