@@ -13,7 +13,10 @@ describe('Login', () => {
         const body = await api()
             .post('/api/auth/login')
             .set('Content-Type', 'application/json')
-            .send(await comTokenAdmin());
+            .send({
+                email: process.env.ADMIN_EMAIL,
+                senha: process.env.ADMIN_SENHA
+            });
 
         expect(body.status).to.equal(200);
     })
