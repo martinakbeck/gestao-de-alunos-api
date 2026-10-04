@@ -1,5 +1,5 @@
 import { expect }           from 'chai';
-import { cadastrarDisciplina, cadastrarAluno, deletarAluno } from './helpers/cadastros.js';
+import { cadastrarDisciplina, cadastrarAluno, deletarAluno, deletarDisciplina } from './helpers/cadastros.js';
 import disciplinas from './fixtures/disciplinas.json' with { type: 'json' };
 import alunos from './fixtures/alunos.json' with { type: 'json' };
 import 'dotenv/config';
@@ -7,9 +7,15 @@ import 'dotenv/config';
 describe('Cadastros', () => {
 
     disciplinas.forEach((disciplina) => {
-        it(disciplina.testTitle, async () => {
+        it.only(disciplina.testTitle, async () => {
             const body = await cadastrarDisciplina(disciplina.dadosDisciplina)
             expect(body.status).to.equal(disciplina.statusEsperado);
+            console.log('body', body.body)
+        })
+afterEach(() => {
+            if (disciplina.statusEsperado === 201) {
+                deletarDisciplina(disciplina.dadosDisciplina.id);
+            }
         })
     })
 

@@ -27,3 +27,11 @@ export async function deletarAluno(id){
         .set('Authorization', await comTokenAdmin());
     return response;
 }
+
+export async function deletarDisciplina(id){
+    const response = await api()
+        .delete(`/api/admin/disciplinas/${id}`)
+        .set('Content-Type', 'application/json')
+        .set('Authorization', await comTokenAdmin());
+    return response;
+}
