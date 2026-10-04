@@ -1,11 +1,11 @@
-import {api} from './helpers/api.js';
-import { expect } from 'chai';
-import * as sinon from 'sinon';
-import authService from '../src/services/auth.service.js';
+import {api}                from './helpers/api.js';
+import { expect }           from 'chai';
+import { comTokenAdmin }    from "./helpers/auth.js";
+import authService          from '../src/services/auth.service.js';
+import * as sinon           from 'sinon';
 import 'dotenv/config';
-import { comTokenAdmin } from "./helpers/auth.js";
 
-describe('Login', () => {
+describe('Login admin', () => {
     afterEach(() => {
     sinon.restore();
 });

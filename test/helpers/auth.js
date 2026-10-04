@@ -1,8 +1,8 @@
-import request from 'supertest';
+import { api } from './api.js';
 import 'dotenv/config';
 
 export async function getToken(email, senha){
-    const body = await request(process.env.BASE_URL)
+    const body = await api()
             .post('/api/auth/login')
             .set('Content-Type', 'application/json')
             .send({
@@ -16,7 +16,7 @@ let tokenEmCache = null
 export async function comTokenAdmin(){
         if(!tokenEmCache){
 
-        const body = await request(process.env.BASE_URL)
+        const body = await api()
                 .post('/api/auth/login')
                 .set('Content-Type', 'application/json')
                 .send({

@@ -1,0 +1,63 @@
+[
+    {
+        "testTitle" : "Cadastrar aluno com dados válidos",
+        "dadosAluno" : {
+            "nome": "Martina Beck",
+            "email": "martina.beck@example.com",
+            "matricula": "20261001",
+            "senha": "senha123"
+        },
+        "statusEsperado" : 201
+    },
+    {
+        "testTitle" : "Cadastrar aluno sem nome",
+        "dadosAluno" : {
+            "nome": "",
+            "email": "carlos.souza@example.com",
+            "matricula": "20261002",
+            "senha": "senha123"
+        },
+        "statusEsperado" : 400
+    },
+    {
+        "testTitle" : "Cadastrar aluno sem email",
+        "dadosAluno" : {
+            "nome": "Mateus Oliveira",
+            "email": "",
+            "matricula": "20261003",
+            "senha": "senha123"
+        },
+        "statusEsperado" : 400
+    },
+    {
+        "testTitle" : "Cadastrar aluno sem matrícula",
+        "dadosAluno" : {
+            "nome": "Ana Clara",
+            "email": "ana.clara@example.com",
+            "matricula": "",
+            "senha": "senha123"
+        },
+        "statusEsperado" : 400
+    },
+    {
+        "testTitle" : "Cadastrar aluno sem senha",
+        "dadosAluno" : {
+            "nome": "Lucas Pereira",
+            "email": "lucas.pereira@example.com",
+            "matricula": "20261005",
+            "senha": ""
+        },
+        "statusEsperado" : 400
+    },
+    {
+        "testTitle" : "Cadastrar aluno já cadastrado",
+        "dadosAluno" : {
+            "nome": "Martina Beck",
+            "email": "martina.beck@example.com",
+            "matricula": "20261006",
+            "senha": "senha123"
+        },
+        "statusEsperado" : 409
+    }
+
+]

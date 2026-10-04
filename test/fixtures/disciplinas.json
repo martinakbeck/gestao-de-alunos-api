@@ -1,0 +1,37 @@
+[
+    {
+        "testTitle" : "Cadastrar disciplina com dados válidos",
+        "dadosDisciplina" : {
+            "nome": "Pensamento Computacional",
+            "codigo": "PC001",
+            "cargaHoraria": 60
+        },
+        "statusEsperado" : 201
+    },
+    {
+        "testTitle" : "Cadastrar disciplina sem nome",
+        "dadosDisciplina" : {
+            "nome": "",
+            "codigo": "PC001",
+            "cargaHoraria": 60
+        },
+        "statusEsperado" : 400
+    },
+    {
+        "testTitle" : "Cadastrar disciplina sem código",        "dadosDisciplina" : {
+            "nome": "Pensamento Computacional",
+            "codigo": "",
+            "cargaHoraria": 60
+        },
+        "statusEsperado" : 400
+    },
+    {
+        "testTitle" : "Cadastrar disciplina sem carga horária",
+        "dadosDisciplina" : {
+            "nome": "Pensamento Computacional",
+            "codigo": "PC001",
+            "cargaHoraria": ""
+        },
+        "statusEsperado" : 400
+    }
+]
