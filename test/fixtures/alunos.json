@@ -1,6 +1,6 @@
 [
     {
-        "testTitle" : "Cadastrar aluno com dados válidos",
+        "testTitle" : "Deve retornar 201 ao cadastrar aluno com dados válidos",
         "dadosAluno" : {
             "nome": "Martina Beck",
             "email": "martina.beck@example.com",
@@ -10,7 +10,7 @@
         "statusEsperado" : 201
     },
     {
-        "testTitle" : "Cadastrar aluno sem nome não é permitido",
+        "testTitle" : "Deve retornar 400 ao cadastrar aluno sem nome",
         "dadosAluno" : {
             "nome": "",
             "email": "carlos.souza@example.com",
@@ -20,7 +20,8 @@
         "statusEsperado" : 400
     },
     {
-        "testTitle" : "Cadastrar aluno sem email não é permitido",
+        "testTitle" : "Deve retornar 400 ao cadastrar aluno sem email",
+
         "dadosAluno" : {
             "nome": "Mateus Oliveira",
             "email": "",
@@ -30,7 +31,7 @@
         "statusEsperado" : 400
     },
     {
-        "testTitle" : "Cadastrar aluno sem matrícula não é permitido",
+        "testTitle" : "Deve retornar 400 ao cadastrar aluno sem matrícula",
         "dadosAluno" : {
             "nome": "Ana Clara",
             "email": "ana.clara@example.com",
@@ -40,7 +41,7 @@
         "statusEsperado" : 400
     },
     {
-        "testTitle" : "Cadastrar aluno sem senha não é permitido",
+        "testTitle" : "Deve retornar 400 ao cadastrar aluno sem senha",
         "dadosAluno" : {
             "nome": "Lucas Pereira",
             "email": "lucas.pereira@example.com",
@@ -50,7 +51,7 @@
         "statusEsperado" : 400
     },
     {
-        "testTitle" : "Não cadastrar aluno já cadastrado não é permitido",
+        "testTitle" : "Deve retornar 409 ao tentar cadastrar aluno já cadastrado",
         "dadosAluno" : {
             "nome": "Martina Beck",
             "email": "martina.beck@example.com",

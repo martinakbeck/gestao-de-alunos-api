@@ -1,6 +1,6 @@
 [
     {
-        "testTitle" : "Cadastrar disciplina com dados válidos",
+        "testTitle" : "Deve retornar 201 ao cadastrar disciplina com dados válidos",
         "dadosDisciplina" : {
             "nome": "Pensamento Computacional",
             "codigo": "PC001",
@@ -9,7 +9,7 @@
         "statusEsperado" : 201
     },
     {
-        "testTitle" : "Cadastrar disciplina sem nome não é permitido",
+        "testTitle" : "Deve retornar 400 ao cadastrar disciplina sem nome",
         "dadosDisciplina" : {
             "nome": "",
             "codigo": "PC002",
@@ -18,7 +18,7 @@
         "statusEsperado" : 400
     },
     {
-        "testTitle" : "Cadastrar disciplina sem código não é permitido",        
+        "testTitle" : "Deve retornar 400 ao cadastrar disciplina sem código",
         "dadosDisciplina" : {
             "nome": "Pensamento Computacional",
             "codigo": "",
@@ -27,7 +27,7 @@
         "statusEsperado" : 400
     },
     {
-        "testTitle" : "Cadastrar disciplina sem carga horária com sucesso",
+        "testTitle" : "Deve retornar 201 ao cadastrar disciplina sem carga horária",
         "dadosDisciplina" : {
             "nome": "Pensamento Computacional",
             "codigo": "PC003",
@@ -36,7 +36,7 @@
         "statusEsperado" : 201
     },
     {
-        "testTitle" : "Não é possível cadastrar disciplina com código já existente",
+        "testTitle" : "Deve retornar 409 ao tentar cadastrar disciplina com código já existente",
         "dadosDisciplina" : {
             "nome": "Pensamento Computacional",
             "codigo": "PC001",

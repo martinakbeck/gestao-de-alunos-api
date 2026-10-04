@@ -1,6 +1,6 @@
 [
     {
-        "testTitle": "Trabalho com dados válidos é entregue com sucesso",
+        "testTitle": "Deve retornar 201 ao entregar trabalho com dados válidos",
         "dadosAluno":{
             "alunoId": "aluno-ana-souza",
             "email": "ana.souza@example.com",
@@ -14,7 +14,7 @@
         "statusEsperado": 201
     },
     {        
-        "testTitle": "Trabalho sem disciplina não é entregue",
+        "testTitle": "Deve retornar 400 ao entregar trabalho sem disciplina",
         "dadosAluno":{
             "alunoId": "aluno-bruno-lima",
             "email": "bruno.lima@example.com",
@@ -28,7 +28,7 @@
         "statusEsperado": 400
     },
     {
-        "testTitle": "Trabalho sem título não é entregue",
+        "testTitle": "Deve retornar 400 ao entregar trabalho sem título",
         "dadosAluno":{
             "alunoId": "aluno-bruno-lima",
             "email": "bruno.lima@example.com",
@@ -42,7 +42,7 @@
         "statusEsperado": 400
     },
     {
-        "testTitle": "Trabalho sem descrição é entregue",
+        "testTitle": "Deve retornar 201 ao entregar trabalho sem descrição",
         "dadosAluno":{
             "alunoId": "aluno-bruno-lima",
             "email": "bruno.lima@example.com",
@@ -56,7 +56,7 @@
         "statusEsperado": 201
     },
     {
-        "testTitle": "Trabalho não é entregue quando aluno não está vinculado à disciplina",
+        "testTitle": "Deve retornar 409 ao tentar entregar trabalho quando aluno não está vinculado à disciplina",
         "dadosAluno":{
             "alunoId": "aluno-carla-mendes",
             "email": "carla.mendes@example.com",
