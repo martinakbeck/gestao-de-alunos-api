@@ -2,6 +2,7 @@ import { api } from "./helpers/api.js";
 import { expect } from "chai";
 import authService from "../src/services/auth.service.js";
 import * as sinon from "sinon";
+import { comTokenAluno } from "./helpers/auth.js";
 import "dotenv/config";
 
 describe("Login aluno", () => {
