@@ -23,12 +23,6 @@ jobs:
 
       - name: Instalando dependências
         run: npm ci
-
-      - name: Verificando secrets
-        run: |
-          echo "LOGIN_EMAIL length: ${#LOGIN_EMAIL}"
-          echo "LOGIN_SENHA length: ${#LOGIN_SENHA}"
-          echo "BASE_URL length: ${#BASE_URL}"
           
       - name: Subindo a API
         run: npm start &

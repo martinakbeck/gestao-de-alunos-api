@@ -10,7 +10,6 @@ describe('Cadastros', () => {
         it.only(disciplina.testTitle, async () => {
             const body = await cadastrarDisciplina(disciplina.dadosDisciplina)
             expect(body.status).to.equal(disciplina.statusEsperado);
-            console.log('body', body.body)
         })
 afterEach(() => {
             if (disciplina.statusEsperado === 201) {
