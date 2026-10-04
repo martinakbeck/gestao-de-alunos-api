@@ -50,7 +50,7 @@
         "statusEsperado" : 400
     },
     {
-        "testTitle" : "Cadastrar aluno já cadastrado",
+        "testTitle" : "Não cadastrar aluno já cadastrado",
         "dadosAluno" : {
             "nome": "Martina Beck",
             "email": "martina.beck@example.com",

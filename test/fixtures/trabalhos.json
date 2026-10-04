@@ -1,0 +1,72 @@
+[
+    {
+        "testTitle": "Trabalho com dados válidos é entregue com sucesso",
+        "dadosAluno":{
+            "alunoId": "aluno-ana-souza",
+            "email": "ana.souza@example.com",
+            "senha": "123456"
+        },
+        "dadosTrabalho": {
+            "disciplinaId": "disciplina-matematica",
+            "titulo": "Trabalho de Matemática",
+            "descricao": "Entrega do trabalho de matemática"
+        },
+        "statusEsperado": 201
+    },
+    {        
+        "testTitle": "Trabalho sem disciplina não é entregue",
+        "dadosAluno":{
+            "alunoId": "aluno-bruno-lima",
+            "email": "bruno.lima@example.com",
+            "senha": "123456"
+        },
+        "dadosTrabalho": {
+            "disciplinaId" : "",
+            "titulo": "Trabalho de História",
+            "descricao": "Entrega do trabalho de matemática"
+        },
+        "statusEsperado": 400
+    },
+    {
+        "testTitle": "Trabalho sem título não é entregue",
+        "dadosAluno":{
+            "alunoId": "aluno-bruno-lima",
+            "email": "bruno.lima@example.com",
+            "senha": "123456"
+        },
+        "dadosTrabalho": {
+            "disciplinaId" : "disciplina-historia",
+            "titulo": "",
+            "descricao": "Entrega do trabalho de matemática"
+        },
+        "statusEsperado": 400
+    },
+    {
+        "testTitle": "Trabalho sem descrição é entregue",
+        "dadosAluno":{
+            "alunoId": "aluno-bruno-lima",
+            "email": "bruno.lima@example.com",
+            "senha": "123456"
+        },
+        "dadosTrabalho": {
+            "disciplinaId" : "disciplina-historia",
+            "titulo": "Trabalho de História",
+            "descricao": ""
+        },
+        "statusEsperado": 201
+    },
+    {
+        "testTitle": "Trabalho não é entregue quando aluno não está vinculado à disciplina",
+        "dadosAluno":{
+            "alunoId": "aluno-carla-mendes",
+            "email": "carla.mendes@example.com",
+            "senha": "123456"
+        },
+        "dadosTrabalho": {
+            "disciplinaId": "disciplina-matematica",
+            "titulo": "Trabalho de Matemática",
+            "descricao": "Entrega do trabalho de matemática"
+        },
+        "statusEsperado": 409
+    }
+]

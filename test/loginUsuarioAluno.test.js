@@ -1,5 +1,4 @@
 import { api } from './helpers/api.js';
-import { getToken } from './helpers/auth.js';
 import { expect }           from 'chai';
 import authService          from '../src/services/auth.service.js';
 import * as sinon           from 'sinon';
@@ -47,7 +46,7 @@ describe('Login aluno', () => {
         const body = await api()
             .post('/api/auth/login')
             .set('Content-Type', 'application/json')
-            .send(await getToken('ana.souza@example.com', '123456'));
+            .send(await comTokenAluno('ana.souza@example.com', '123456'));
         expect(body.status).to.equal(500);
         
         sinon.restore();

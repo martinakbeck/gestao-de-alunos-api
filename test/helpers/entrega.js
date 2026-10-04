@@ -5,7 +5,7 @@ export async function entregarTrabalho(token, alunoId, trabalho){
     const response = await api()
         .post(`/api/alunos/${alunoId}/trabalhos`)
         .set('Content-Type', 'application/json')
-        .set('Authorization', `Bearer ${token}`)
+        .set('Authorization', token)
         .send(trabalho);
 
     return response;

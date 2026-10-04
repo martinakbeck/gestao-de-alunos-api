@@ -1,16 +1,15 @@
 import { api } from './api.js';
 import 'dotenv/config';
 
-export async function getToken(email, senha){
+export async function comTokenAluno(emailAluno, senhaAluno){
     const body = await api()
             .post('/api/auth/login')
             .set('Content-Type', 'application/json')
             .send({
-                email: email, 
-                senha: senha});
+                email: emailAluno, 
+                senha: senhaAluno});
 
-
-        return body.body.token;
+        return `Bearer ${body.body.token}`;
 }
 let tokenEmCache = null
 export async function comTokenAdmin(){
